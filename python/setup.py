@@ -5,9 +5,8 @@ https://github.com/thewtex/cython-cmake-example/blob/master/setup.py
 '''
 
 import os
-from setuptools import setup
-from distutils.extension import Extension
-from Cython.Distutils import build_ext
+from setuptools import setup, find_packages, Extension
+from Cython.Build import cythonize
 
 import numpy
 
@@ -24,12 +23,18 @@ ext_modules = [
               )
 ]
 
-
+compiler_directives = {"language_level": 3, "embedsignature": True}
+ext_modules = cythonize(ext_modules, compiler_directives=compiler_directives)
 
 setup(
     name="mycythonlib",
-    cmdclass={"build_ext": build_ext},
-    ext_modules=ext_modules
+    version='0.0.1',
+    ext_modules=ext_modules,
+    python_requires='>=3.7',
+    install_requires=[
+        'numpy',
+        'cython',
+    ],
 )
 
 ###########################################

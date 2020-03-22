@@ -14,7 +14,7 @@ import numpy as np
 cimport numpy as np
 
 # declare the interface to the C code
-cdef extern from "../cpp/include/simplelibrary.h":
+cdef extern from "../cpp/include/library.h":
     cdef extern void c_multiply (double* array, double value, int m)
 
 
