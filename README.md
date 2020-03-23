@@ -62,3 +62,7 @@ Output
 Before Multiply [1. 2. 3. 4. 5.]
 After Multiply [ 3.  6.  9. 12. 15.]
 ```
+
+```bash
+python3 test/test_geometry.py
+```
