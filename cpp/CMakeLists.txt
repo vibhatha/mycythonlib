@@ -8,6 +8,7 @@ set(CMAKE_CXX_STANDARD 14)
 #find_package(MPI REQUIRED)
 #include_directories(${MPI_CXX_INCLUDE_PATH})
 
-add_library(MyCythonLib SHARED src/library.cpp include/library.h src/simplelibrary.cpp include/simplelibrary.h)
+add_library(MyCythonLib SHARED src/library.cpp include/library.h src/simplelibrary.cpp include/simplelibrary.h
+        include/Rectangle.h src/Rectangle.cpp include/Circle.h src/Circle.cpp)
 
 install(TARGETS MyCythonLib DESTINATION /usr/lib)

@@ -6,6 +6,7 @@
 #define MYCYTHONLIB_SIMPLELIBRARY_H
 
 
-void c_multiply (double* array, double multiplier, int m);
+void c_multiply(double* array, double multiplier, int m);
+void c_addition(double* array1, double* array2);
 
 #endif //MYCYTHONLIB_SIMPLELIBRARY_H
